@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Happiness Score in 2015</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/grids-responsive-min.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Alkalami&family=Fuzzy+Bubbles:wght@400;700&family=Oswald:wght@500&family=Roboto+Condensed:wght@700&family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="pure-g">
+            <div class="pure-u-1-1">
+                <h1>World Happiness Score in 2015</h1>
+                <p>Since it was first published in 2012, the World Happiness Report demonstrated that well-being and happiness are critical indicators of a nation’s economic and social development, and should be a key aim of policy. 
+                    2015 report looks at the changes in happiness levels in 158 countries, and examines the reasons behind the statistics. The World Happiness Report 2015 also comes in advance of three high-level negotiations that will give world leaders the opportunity to reshape the global agenda and move the world towards a sustainable development agenda that includes well-being as an essential element. </p>
+            </div>
+            <div class="pure-1-1">
+                <div id="vis1" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-2">
+                <div class="description description-left">
+                <h2>Rank of the World Happiness Score</h2>
+                <p>The World Happiness Report 2015 reveals trends in the data judging just how happy countries really are. 
+                    On a scale running from 0 to 10, people in over 150 countries, surveyed by Gallup over the period 2012-15, reveal an average score of 5.1 (out of 10). 
+                    Six key variables explain three-quarters of the variation in annual national average scores over time and among countries: real GDP per capita, healthy life expectancy, having someone to count on, perceived freedom to make life choices, freedom from corruption, and generosity (Table 2.1). 
+                    This year for the first time ever, the Report breaks down the data by gender, age, and region. It finds striking differences, some much larger than have previously been found.
+                </p>
+            </div>
+            <div class="pure-u-1-2">
+                <div id="vis2" class="vis-container"></div>
+                <div id="vis3" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-3">
+                <h2>The impact of GDP on national happiness index</h2>
+                <p>Using continent as a differentiator, group the top 158 countries in happiness index to see the impact of GDP,
+                    GDP is often used as an authoritative indicator for judging whether a country's economy is moving forward or backward. However, 
+                    GDP is not perfect. It measures the size of an economy, but not how good it is. The top countries in the global happiness index, 
+                    such as Finland, Norway, Denmark, Iceland, Switzerland, the Netherlands, etc., although these countries are not ranked in the top of the GDP, 
+                    they have a prosperous and stable society, a sound welfare system, and a beautiful environment. They all have a common law: the citizens of powerful and big countries are not necessarily happy, 
+                    and the citizens of small and weak countries are not necessarily unhappy. For example, Canada and New Zealand don’t even have an army. After the age of 50, stress, anger and anxiety will dissipate, 
+                    and happiness will increase. In addition, having a high level of education and engaging in creative work, such as engineering, construction, computer, art, sports, entertainment and media, can bring people a sense of happiness.
+                </p>
+            </div>
+            <div class="pure-u-1-3">
+                <div id="vis4" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-4">
+                <h2>The influence of family on happiness index</h2>
+                <p>The family is the most basic cell of the society, and the harmony and happiness of the family is the premise and foundation of the harmony and happiness of the whole country and society. 
+                    Cultivate a healthy lifestyle, strengthen exercise and maintain an appropriate weight, maintain a harmonious and intimate relationship with parents, lovers and children, create a warm and happy family atmosphere for children and the elderly, be willing to help and trust others, and be cautious about marriage, Behaviors such as not easily divorced are more conducive to enhancing the happiness of individuals and families.</p>
+            </div>
+            <div class="pure-u-1-4">
+                <div id="vis5" class="vis-container"></div>
+            </div>
+        </div>
+
+        <div class="pure-g">
+            <div class="pure-u-1-5">
+                <h2>The influence of other factors on the happiness index</h2>
+            </div>
+            <div class="pure--u-1-5">
+                <div id="vis6" class="vis-container"></div>
+            </div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        var specvis1 = "./visualization.vl-map1.json";
+        var specvis2 = "./visualization.vl-rank.json";
+        var specvis3 = "./visualization.vl-region dount.json";
+        var specvis4 = "./visualization.vl-GDP.json";
+        var specvis5 = "./visualization.vl-family.json";
+        var specvis6 = "./visualization.vl-other.json";
+
+        vegaembed('#vis1', specvis1,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaembed('#vis2', specvis2,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaembed('#vis3', specvis3,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaembed('#vis4', specvis4,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaembed('#vis5', specvis5,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+
+    vegaembed('#vis6', specvis6,{ "actions": false }).then(function (result) {
+      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+    }).catch(console.error);
+    </script>
+</body>
+</html>
