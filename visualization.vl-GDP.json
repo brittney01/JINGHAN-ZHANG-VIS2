@@ -1,0 +1,30 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/brittney01/visualization-jinghan-zhang/main/2015.csv"
+  },
+  "params": [{"name": "highlight", "select": "point"}],
+  "mark": {"type": "rect", "strokeWidth": 2},
+  "encoding": {
+    "y": {"field": "Economy (GDP per Capita)", "type": "quantitative"},
+    "x": {"field": "Region", "type": "nominal"},
+    "fill": {"field": "Happiness Score", "type": "quantitative"},
+    "stroke": {
+      "condition": {"param": "highlight", "empty": false, "value": "black"},
+      "value": null
+    },
+    "opacity": {"condition": {"param": "highlight", "value": 1}, "value": 0.5},
+    "order": {"condition": {"param": "highlight", "value": 1}, "value": 0},
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Happiness Rank", "type": "quantitative"},
+      {"field": "Happiness Score", "type": "quantitative"}
+    ]
+  },
+  "config": {
+    "scale": {"bandPaddingInner": 0, "bandPaddingOuter": 0},
+    "view": {"step": 40},
+    "range": {"ramp": {"scheme": "yellowgreenblue"}},
+    "axis": {"domain": false}
+  }
+}
