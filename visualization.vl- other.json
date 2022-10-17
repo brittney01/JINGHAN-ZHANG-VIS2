@@ -1,0 +1,40 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "Nested concatenation aligned by setting axis minExtent",
+  "data": {
+    "url": "https://raw.githubusercontent.com/brittney01/visualization-jinghan-zhang/main/2015.csv"
+  },
+  "vconcat": [
+    {
+      "title": "other effects",
+      "repeat": {"column": ["Health (Life Expectancy)", "Freedom"]},
+      "spec": {
+        "width": 150,
+        "height": 50,
+        "mark": "bar",
+        "encoding": {
+          "x": {"field": {"repeat": "column"}, "bin": {"maxbins": 20}},
+          "y": {"aggregate": "count"}
+        }
+      }
+    },
+    {
+      "title": "Gross",
+      "repeat": {"column": ["Trust (Government Corruption)", "Generosity"]},
+      "spec": {
+        "width": 150,
+        "height": 50,
+        "encoding": {
+          "x": {"field": {"repeat": "column"}, "bin": {"maxbins": 20}},
+          "y": {"aggregate": "count"}
+        },
+        "mark": "bar"
+      }
+    }
+  ],
+  "config": {
+    "countTitle": "Count",
+    "axisX": {"titleLimit": 150},
+    "axisY": {"minExtent": 40}
+  }
+}
