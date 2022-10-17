@@ -13,7 +13,7 @@
       "lookup": "properties.NAME",
       "from": {
         "data": {
-          "url": "https://raw.githubusercontent.com/brittney01/visualization-jinghan-zhang/main/2015.csv"
+          "url": "https://raw.githubusercontent.com/brittney01/JINGHAN-ZHANG-VIS2/main/2015.csv"
         },
         "key": "Country",
         "fields": ["Happiness Score"]
