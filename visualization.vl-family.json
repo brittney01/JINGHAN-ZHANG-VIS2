@@ -4,7 +4,7 @@
   "width": 500,
   "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/brittney01/visualization-jinghan-zhang/main/2015.csv"
+    "url": "https://raw.githubusercontent.com/brittney01/JINGHAN-ZHANG-VIS2/main/2015.csv"
   },
   "params": [{"name": "view", "select": "interval", "bind": "scales"}],
   "mark": "circle",
