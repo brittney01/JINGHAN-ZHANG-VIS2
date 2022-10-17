@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "A bubble plot showing the correlation between health and income for 187 countries in the world (modified from an example in Lisa Charlotte Rost's blog post 'One Chart, Twelve Charting Libraries' --http://lisacharlotterost.github.io/2016/05/17/one-chart-code/).",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/brittney01/visualization-jinghan-zhang/main/2015.csv"
+  },
+  "params": [{"name": "view", "select": "interval", "bind": "scales"}],
+  "mark": "circle",
+  "encoding": {
+    "y": {
+      "field": "Family",
+      "type": "quantitative",
+      "scale": {"zero": false},
+      "axis": {"minExtent": 50}
+    },
+    "x": {"field": "Region", "scale": {"type": "point"}},
+    "size": {"field": "Happiness Score", "type": "quantitative"},
+    "color": {"value": "#9ecae1"},
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Happiness Rank", "type": "quantitative"},
+      {"field": "Happiness Score", "type": "quantitative"}
+    ]
+  },
+  "config": {}
+}
